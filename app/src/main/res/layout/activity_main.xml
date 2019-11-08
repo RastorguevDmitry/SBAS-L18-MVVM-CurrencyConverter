@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.CurrencyConverterActivity">
+
+    <FrameLayout
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minLines="2"
+                android:text="@string/convert_from"
+                android:textSize="@dimen/big_text_size" />
+
+            <ListView
+                android:id="@+id/list_start_convert"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"></ListView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minLines="2"
+                android:text="@string/convert_to"
+                android:textSize="@dimen/big_text_size" />
+
+            <ListView
+                android:id="@+id/list_result_convert"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"></ListView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText_start_convert"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textSize="@dimen/big_text_size" />
+
+    <TextView
+        android:id="@+id/editText_result_convert"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:inputType="numberDecimal"
+        android:textSize="@dimen/big_text_size" />
+
+    <TextView
+        android:id="@+id/conversionRate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="@dimen/big_text_size" />
+
+</LinearLayout>
